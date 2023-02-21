@@ -9,6 +9,7 @@ border a(t=0,2*pi){x=rad*(1-0.5*sin(2*t))*cos(t);y=rad*(1-0.25*cos(3*t))*sin(t);
 
 //   define domain and mesh
 mesh Omega=buildmesh(a(n1));
+// output mesh data as a file
 savemesh(Omega,"./wwg.msh");
 //plot(Omega,ps="./Omega.eps");
 
@@ -22,7 +23,7 @@ solve pde(u,v)=
 
 plot(Omega,u,wait=true,fill=true,value=true,ps="solution1.eps");
 
-//generate gnuplot data
+// output solution as a file
 ofstream ff("u.txt"); 
 for(int i=0;i<Omega.nt;i++)
 {
