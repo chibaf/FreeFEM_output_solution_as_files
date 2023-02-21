@@ -20,7 +20,7 @@ Vh u,v;
 solve pde(u,v)=
   int2d(Omega)(dx(u)*dx(v)+dy(u)*dy(v)+u*v)+on(a,u=g)-int2d(Omega)(f*v);
 
-plot(Omega,u,fill=1,wait=true,ps="u.eps");
+plot(Omega,u,wait=true,fill=true,value=true,ps="solution1.eps");
 
 //generate gnuplot data
 ofstream ff("u.txt"); 
