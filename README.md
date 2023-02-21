@@ -21,3 +21,6 @@ gnuplot> set output "u.png"
 gnuplot> replot
 
 smooth palette in png: available 157 color positions; using 157 of them
+
+![u](https://user-images.githubusercontent.com/1296728/220378808-6c73ee64-2741-4aa2-afe3-2d835ac5fe66.png)
+
