@@ -24,11 +24,17 @@ solve pde(u,v)=
 plot(Omega,u,wait=true,fill=true,value=true,ps="solution1.eps");
 
 // output solution as a file
-ofstream ff("u.txt"); 
-for(int i=0;i<Omega.nt;i++)
-{
-for (int j=0; j<3; j++){
-ff<<Omega[i][j].x<<" "<<Omega[i][j].y<<" "<<u[][Vh(i,j)]<<endl; 
-ff<<Omega[i][0].x<< " " << Omega[i][0].y << " " << u[][Vh(i,0)] << " \n\n";
- } 
-} 
+//ofstream ff("u.txt"); 
+//for(int i=0;i<Omega.nt;i++)
+//{
+//for (int j=0; j<3; j++){
+//ff<<Omega[i][j].x<<" "<<Omega[i][j].y<<" "<<u[][Vh(i,j)]<<endl; 
+//ff<<Omega[i][0].x<< " " << Omega[i][0].y << " " << u[][Vh(i,0)] << " \n\n";
+// } 
+//} 
+//   save solution
+ {
+  ofstream file("u.out");
+  file << u[] << endl;
+ }
+
